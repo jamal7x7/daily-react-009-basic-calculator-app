@@ -1,0 +1,106 @@
+body {
+  background: #041A3E;
+  font-family: "open sans", "Lato", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #EEE;
+}
+
+.App-header {
+  height: 100px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App-title {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.calculator {
+  width: 600px;
+  height: 730px;
+  margin: 0 auto;
+  background-color: #062659;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 240px 490px 2px;
+  grid-template-areas: ' screen ' ' num-pad ' ' bottom-bar ';
+}
+
+.calculator .screen {
+  background: rgba(4, 26, 62, 0.4);
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: 50px 30px 110px 50px;
+  grid-template-areas: ' . . . ' ' . operations-screen .  ' ' . result-screen .  '  ' . . . ';
+}
+
+.calculator .screen .operations-screen {
+  grid-area: operations-screen;
+  font-size: 22px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.calculator .screen .result-screen {
+  grid-area: result-screen;
+  font-size: 58px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.calculator .num-pad {
+  box-shadow: 0 40px 60px -20px black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: ' pad-AC pad plus-minus pad-perscent pad-divid '  ' pad-7 pad-8 pad-9 pad-multi '  ' pad-4 pad-5 pad-6 pad-minus'  ' pad-1 pad-2 pad-3 pad-plus '  ' pad-0 pad-0 pad-point pad-equal ';
+}
+
+.calculator .num-pad div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border: 1px solid #041A3E;
+  cursor: pointer;
+}
+
+.calculator .num-pad div:hover:not(.pad-equal) {
+  background: #041A3E;
+}
+
+.calculator .num-pad .pad-0 {
+  grid-column: span 2;
+  background: #073175;
+}
+
+.calculator .num-pad .pad-divid {
+  background: #073175;
+}
+
+.calculator .num-pad .pad-multi {
+  background: #073175;
+}
+
+.calculator .num-pad .pad-minus {
+  background: #073175;
+}
+
+.calculator .num-pad .pad-plus {
+  background: #073175;
+}
+
+.calculator .num-pad .pad-equal {
+  background-image: linear-gradient(225deg, #DD8EDA -11%, #42A3F9 100%);
+}
+
+.calculator .bottom-bar {
+  background-image: linear-gradient(225deg, #DD8EDA -11%, #42A3F9 100%);
+}
+/*# sourceMappingURL=App.css.map */
